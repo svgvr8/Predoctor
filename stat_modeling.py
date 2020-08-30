@@ -18,13 +18,12 @@ from sklearn.ensemble import VotingClassifier
 import os
 print(os.listdir("../input"))
 
-file_path= "../input/diabetes2.csv"
+file_path= "../input/cam.csv"
 diab_data = pd.read_csv(file_path)
 
 diab_data.head()
 y = diab_data.Outcome
-features = ['Age','Glucose','BMI','DiabetesPedigreeFunction','Pregnancies','SkinThickness','Insulin',
-            'Glucose']
+features = ['Lights','Police','Kids','Gender','Outcome']
 X = diab_data[features]
 train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=1)
 my_model = LogisticRegression()
