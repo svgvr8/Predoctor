@@ -23,7 +23,7 @@ diab_data = pd.read_csv(file_path)
 
 diab_data.head()
 y = diab_data.Outcome
-features = ['Lights','Police','Kids','Gender','Outcome']
+features = ['Pregnancies','Glucose','Bloodpressure','SkinThickness','Insulin','BMI','Diabetes','Age']
 X = diab_data[features]
 train_X, val_X, train_y, val_y = train_test_split(X, y, random_state=1)
 my_model = LogisticRegression()
